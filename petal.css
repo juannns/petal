@@ -1,0 +1,322 @@
+:root {
+    --fundo: rgb(44, 41, 41);
+    --container: rgb(238, 238, 238);
+    --botao: rgb(51, 51, 51);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 0 0;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+    width: min(1200px, 95%);
+    min-height: 480px;
+
+    background-color: var(--container);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+
+.divisor {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.divisor img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BOTÃO */
+
+.btn {
+    background-color: var(--botao);
+
+    border-radius: 50px;
+    padding: 12px 24px;
+
+    margin-top: 25px;
+
+    display: inline-flex;
+    align-items: center;
+
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.btn i {
+    color: white;
+    margin-right: 10px;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* IMAGEM */
+
+.img-ariana {
+    max-width: 45%;
+    height: auto;
+
+    object-fit: contain;
+    display: block;
+}
+
+/* TEXTO */
+
+.container-texto {
+    width: min(1200px, 95%);
+
+    padding: 40px;
+
+    color: #b3b3b3;
+    font-size: 1rem;
+    line-height: 1.8;
+
+    border-radius: 20px;
+    box-shadow: 0 14px 14px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+    margin-bottom: 30px;
+}
+
+.container-texto p {
+    width: 100%;
+
+    margin-bottom: 16px;
+
+    text-align: justify;
+    text-indent: 2em;
+
+    word-break: break-word;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+
+    background: rgb(97, 93, 93);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer img[alt=""] {
+    width: 280px;
+    max-width: 90%;
+    height: auto;
+}
+
+.e-mail {
+    margin: 8px 0;
+}
+
+.e-mail a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+}
+
+.copyright {
+    color: white;
+
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.design {
+    color: white;
+}
+
+/* TABLETS */
+
+@media (max-width: 992px) {
+
+    .container {
+        min-height: auto;
+        padding: 30px;
+    }
+
+    .img-ariana {
+        max-width: 40%;
+    }
+
+    .divisor {
+        padding: 30px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+    .divisor {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .img-ariana {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn a {
+        font-size: 0.9rem;
+    }
+
+    .container-texto {
+        padding: 25px 20px;
+    }
+
+    .container-texto p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-indent: 1.5em;
+    }
+
+    .titulo {
+        max-width: 280px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+
+    footer img[alt=""] {
+        width: 180px;
+    }
+
+    .e-mail a {
+        font-size: 0.9rem;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+    .container-texto {
+        padding: 20px 15px;
+    }
+
+    .container-texto p {
+        font-size: 0.9rem;
+        text-indent: 1em;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+
+    .btn a {
+        font-size: 0.85rem;
+    }
+
+    footer img[alt=""] {
+        width: 150px;
+    }
+
+    .e-mail a {
+        font-size: 0.85rem;
+    }
+}
